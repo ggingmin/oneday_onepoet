@@ -1,5 +1,8 @@
 @import "bootstrap-sprockets";
 @import "bootstrap";
+@import url(//fonts.googleapis.com/earlyaccess/nanummyeongjo.css);
+@import url(//fonts.googleapis.com/earlyaccess/notosanskr.css);
+
 
 
 /* mixins, variables, etc. */
@@ -16,6 +19,13 @@ $gray-light: gray;
 
 
 /* universal */
+
+* {
+  border-radius: 0 !important;
+  font-family: 'Noto Sans KR', sans-serif;
+  font-weight: lighter;
+  text-shadow: 0 0 1px rgba(0,0,0,0.3) !important;  
+}
 
 body {
   padding-top: 60px;
@@ -36,6 +46,13 @@ textarea {
   }
 }
 
+div.pagination {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+}
+
 /* typography */
 
 h1, h2, h3, h4, h5, h6 {
@@ -43,7 +60,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 h1 {
-  font-size: 3em;
+  font-size: 2em !important;
   letter-spacing: -2px;
   margin-bottom: 30px;
   text-align: center;
@@ -66,19 +83,59 @@ p {
 
 /* header */
 
+header {
+  background-color: #565555 !important;
+}
+
 #logo {
   float: left;
   margin-right: 10px;
-  font-size: 1.7em;
+  font-family: 'Nanum Myeongjo', serif;
+  font-size: 1.8em;
+  font-weight: 100;
   color: white;
   text-transform: uppercase;
-  letter-spacing: -1px;
   padding-top: 9px;
-  font-weight: bold;
   &:hover {
-    color: white;
+    color: lightgray;
     text-decoration: none;
   }
+}
+
+#login-btn {
+  background-color: #008CBA;
+  color: white;
+  margin-right: 15px;
+  font-size: 1.2em;
+  &:hover {
+    background-color: #58bedd;
+  }
+}
+
+#usage-btn {
+  color: white;
+  font-size: 1.2em;
+  &:hover {
+    background-color: #7c7b7b !important;
+  }  
+}
+
+#users-btn {
+  color: white;
+  font-size: 1.2em;
+  &:hover {
+    background-color: #7c7b7b !important;
+  }    
+}
+
+#acnt-btn {
+  background-color: #008CBA;
+  color: white;
+  margin-right: 15px;
+  font-size: 1.2em;
+  &:hover {
+    background-color: #58bedd;
+  }  
 }
 
 /* footer */
@@ -105,6 +162,26 @@ footer {
       margin-left: 15px;
     }
   }
+}
+
+
+/* 'home' page */
+
+.jumbotron {
+  background-image: url('home.jpg');
+  background-position: center center;
+  background-size: cover;
+}
+
+.home-title {
+  font-family: 'DXPnMStd-Regular';  
+  margin-top: 0 !important;
+  margin-bottom: 1.3em !important;
+  color: white !important;
+}
+
+.home-text {
+  color: white;
 }
 
 
