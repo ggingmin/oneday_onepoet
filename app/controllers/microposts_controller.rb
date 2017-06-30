@@ -5,7 +5,7 @@ class MicropostsController < ApplicationController
   def create
     @micropost = current_user.microposts.build(micropost_params)
     if @micropost.save
-      flash[:success] = "Micropost created!"
+      flash[:success] = "당신의 마음을 울린 시 한 줄이 포스팅 되었습니다."
       redirect_to root_url
     else
       @feed_items = []
@@ -15,7 +15,7 @@ class MicropostsController < ApplicationController
 
   def destroy
     @micropost.destroy
-    flash[:success] = "Micropost deleted"
+    flash[:success] = "당신의 시 한 줄이 지워졌습니다."
     redirect_to request.referrer || root_url    
   end
 

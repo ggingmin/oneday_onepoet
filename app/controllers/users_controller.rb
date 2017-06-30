@@ -21,7 +21,7 @@ class UsersController < ApplicationController
     @user = User.new(user_params)
     if @user.save
       log_in @user
-      flash[:success] = "Welcome to the Sample App!"
+      flash[:success] = "이제 당신 마음속의 시 한 줄로 많은 이들을 위로해 주세요."
       redirect_to @user
     else
       render 'new'
@@ -43,7 +43,7 @@ class UsersController < ApplicationController
   
   def destroy
     User.find(params[:id]).destroy
-    flash[:success] = "User deleted"
+    flash[:success] = "계정삭제가 완료되었습니다."
     redirect_to users_url
   end
   
